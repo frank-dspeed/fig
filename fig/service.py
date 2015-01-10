@@ -623,6 +623,7 @@ def split_port(port):
         external_port, internal_port = parts
         return internal_port, external_port
 
+    # Add Check if external_ip = host then dns
     external_ip, external_port, internal_port = parts
     return internal_port, (external_ip, external_port or None)
 
