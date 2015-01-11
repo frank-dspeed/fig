@@ -1,6 +1,14 @@
 Fig
 ===
 
+Fork Enables:
+````
+ environment:
+    SOME_VALUE: 123
+    DOCKER_HOST: !!python/object/apply:os.getenv ["DOCKER_HOST"]
+````    
+
+
 [![wercker status](https://app.wercker.com/status/d5dbac3907301c3d5ce735e2d5e95a5b/s/master "wercker status")](https://app.wercker.com/project/bykey/d5dbac3907301c3d5ce735e2d5e95a5b)
 
 Fast, isolated development environments using Docker.
