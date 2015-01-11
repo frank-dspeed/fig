@@ -69,7 +69,7 @@ class Command(DocoptCommand):
     def get_config(self, config_path):
         try:
             with open(config_path, 'r') as fh:
-                return yaml.safe_load(fh)
+                return yaml.load(fh)
         except IOError as e:
             if e.errno == errno.ENOENT:
                 raise errors.FigFileNotFound(os.path.basename(e.filename))
